@@ -1,0 +1,23 @@
+<?php
+$i=0;
+$store;
+$checkpoint=0;
+for($int1=999;$int1>99;$int1--)
+		{
+		if($checkpoint==1)
+		break;
+		for($int2=999;$int2>99;$int2--)
+			{
+			$a=$int1*$int2;
+			$str_a="$a";
+			$str_b=strrev($a);
+			if(strcmp($str_a,$str_b)==0)
+				{
+				$store[$i]=$a;
+				$i++; 
+				}
+			}
+		}
+sort($store); 
+echo $store[$i-1];
+?>
